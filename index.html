@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Two-week parent coaching Reset with a Board Certified Behavior Analyst. One behavior, a real plan, your own data. Cash pay, no diagnosis needed.">
+<meta property="og:title" content="Last Nerve: parent coaching from a BCBA">
+<meta property="og:description" content="Down to your last nerve? Tag in a pro. A 2-week Reset for the one behavior running your house.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231e1a3a'/%3E%3Cpath d='M5 16h12' stroke='%23fff' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M17 16c3-2 6-6 10-8M17 16c4 0 7 1 10 2M17 16c3 2 5 6 8 9' stroke='%23ff5c9a' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Last Nerve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow reading column, a full-bleed hero with a frayed "nerve" line, and a 3-up price row that stacks on phones */
+:root{
+  --bg:#fbf8ff;
+  --surface:#ffffff;
+  --ink:#1e1a3a;
+  --muted:#5d5878;
+  --line:#e4def3;
+  --accent:#d6286f;
+  --accent-ink:#ffffff;
+  --glow:#ffcf3f;
+  --soft:#f3edff;
+  --display:"Chivo",ui-sans-serif,system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15122a;--surface:#1e1a3a;--ink:#f3efff;--muted:#b3acd3;--line:#352f5c;
+  --accent:#ff5c9a;--accent-ink:#1a0d16;--glow:#ffd95e;--soft:#231e44;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15122a;--surface:#1e1a3a;--ink:#f3efff;--muted:#b3acd3;--line:#352f5c;
+  --accent:#ff5c9a;--accent-ink:#1a0d16;--glow:#ffd95e;--soft:#231e44;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+.wrap{max-width:68rem;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.col{max-width:40rem}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h1{font-weight:900;font-size:clamp(2.6rem,7vw,5rem);letter-spacing:-.02em}
+h2{font-weight:900;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.01em}
+h3{font-weight:700;font-size:1.2rem}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:6px}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px}
+.logo{font-family:var(--display);font-weight:900;font-size:1.35rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+.top a.small{font-family:var(--mono);font-size:.85rem;text-decoration:none}
+
+/* hero */
+.hero{padding-block:clamp(32px,7vw,80px) 24px;display:grid;gap:28px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:clamp(1.1rem,2vw,1.3rem);color:var(--muted);max-width:36rem}
+.nerve{width:100%;height:auto;display:block;max-width:100%}
+.nerve .taut{stroke:var(--ink);stroke-width:3;fill:none;stroke-linecap:round}
+.nerve .fray{stroke:var(--accent);stroke-width:2;fill:none;stroke-linecap:round}
+.nerve .spark{fill:var(--glow)}
+@media (prefers-reduced-motion:no-preference){
+  .nerve .spark{animation:twinkle 2.4s ease-in-out infinite}
+  .nerve .spark:nth-of-type(2){animation-delay:.8s}
+  .nerve .spark:nth-of-type(3){animation-delay:1.6s}
+  @keyframes twinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+  .nerve .spark{transform-box:fill-box;transform-origin:center}
+}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:1.05rem;
+  padding:14px 22px;border-radius:999px;text-decoration:none;border:2px solid var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+.fine{font-size:.9rem;color:var(--muted)}
+
+/* stat strip */
+.stat{margin-block:56px;padding:28px clamp(20px,4vw,40px);background:var(--soft);border-radius:20px;display:grid;
+  grid-template-columns:auto 1fr;gap:20px 32px;align-items:center}
+.stat .num{font-family:var(--display);font-weight:900;font-size:clamp(3rem,9vw,5.5rem);line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat p{max-width:34rem}
+.stat cite{display:block;margin-top:8px;font-style:normal;font-size:.85rem;color:var(--muted)}
+@media (max-width:560px){.stat{grid-template-columns:1fr}}
+
+section{padding-block:48px}
+section > .head{display:grid;gap:10px;margin-bottom:28px}
+
+/* reset timeline */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:3px solid var(--line);margin-left:8px}
+.steps li{position:relative;padding:0 0 26px 28px}
+.steps li::before{content:"";position:absolute;left:-10px;top:4px;width:17px;height:17px;border-radius:50%;
+  background:var(--bg);border:3px solid var(--accent)}
+.steps li:last-child::before{background:var(--accent)}
+.steps .when{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;color:var(--accent);text-transform:uppercase}
+.steps h3{margin-block:4px 4px}
+.steps p{color:var(--muted)}
+
+/* pricing */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:860px){.tiers{grid-template-columns:1fr}}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:12px;align-content:start}
+.tier.feature{border:2px solid var(--accent)}
+.tier .price{font-family:var(--display);font-weight:900;font-size:2.2rem;font-variant-numeric:tabular-nums}
+.tier .price small{font-family:var(--body);font-weight:400;font-size:.95rem;color:var(--muted)}
+.tier ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
+.tag{justify-self:start;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--glow);color:#1e1a3a;padding:4px 10px;border-radius:999px}
+
+/* fit */
+.fit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:700px){.fit{grid-template-columns:1fr}}
+.fit > div{padding:24px;border-radius:18px;border:1px solid var(--line);background:var(--surface);display:grid;gap:10px;align-content:start}
+.fit ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+
+/* about */
+.about{display:grid;gap:14px}
+.creds{font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+
+/* join */
+.join{background:var(--ink);color:var(--bg);border-radius:24px;padding:clamp(28px,5vw,56px);display:grid;gap:18px;margin-block:48px}
+.join h2{color:var(--bg)}
+.join p{color:var(--bg);opacity:.85;max-width:38rem}
+.join .btn.ghost{color:var(--bg);border-color:var(--bg)}
+.crisis{border-top:1px solid var(--line);padding-block:24px;font-size:.92rem;color:var(--muted)}
+.crisis strong{color:var(--ink)}
+footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#top" aria-label="Last Nerve home">last<span>nerve</span></a>
+    <a class="small" href="#join">Join the waitlist</a>
+  </header>
+
+  <div class="hero" id="top">
+    <p class="eyebrow">Parent coaching from a Board Certified Behavior Analyst</p>
+    <h1>Down to your <em>last nerve?</em><br>Tag in a pro.</h1>
+    <p class="lede">Two weeks. One behavior that's running your house. A plan built on real data from your kitchen, and a behavior analyst in your corner the whole way.</p>
+    <svg class="nerve" viewBox="0 0 800 90" role="img" aria-label="A taut line that frays into loose strands at one end">
+      <path class="taut" d="M10 45 C 120 45, 240 44, 360 45 S 520 46, 560 45"/>
+      <path class="fray" d="M560 45 C 600 40, 640 22, 700 14"/>
+      <path class="fray" d="M560 45 C 610 44, 660 40, 735 36"/>
+      <path class="fray" d="M560 45 C 605 50, 650 62, 712 74"/>
+      <path class="fray" d="M560 45 C 600 54, 625 78, 668 86"/>
+      <path class="spark" d="M712 4 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z"/>
+      <path class="spark" d="M752 28 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/>
+      <path class="spark" d="M726 66 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3z"/>
+    </svg>
+    <div class="cta-row">
+      <a class="btn primary js-deposit" href="#join">Hold a founding spot, $15</a>
+      <a class="btn ghost" href="#how">See how it works</a>
+    </div>
+    <p class="fine">Fully refundable deposit. Now enrolling families in Pennsylvania, Missouri, Virginia, Texas, and California.</p>
+  </div>
+
+  <div class="stat">
+    <div class="num">48%</div>
+    <p>of parents say that most days, their stress is completely overwhelming. For other adults, it's 26%. You are not imagining it, and you are not the only one.
+      <cite>U.S. Surgeon General's Advisory on Parental Stress, August 2024</cite></p>
+  </div>
+
+  <section id="how">
+    <div class="head col">
+      <p class="eyebrow">The 2-week Reset</p>
+      <h2>Pick one fight. We'll end it with a plan, not a pep talk.</h2>
+      <p class="fine">Bedtime. Mornings. Meltdowns. Screens. Sibling wars. Homework. Potty training. One target at a time, because that's what actually works.</p>
+    </div>
+    <ol class="steps col">
+      <li><p class="when">Before day 1 · 20 minutes</p><h3>Tell us what's happening</h3>
+        <p>Short online forms: your family, the behavior, when it happens, what you've tried. Then three days of quick tap-to-log notes on your phone.</p></li>
+      <li><p class="when">Day 1 · 45-minute video call</p><h3>Figure out why</h3>
+        <p>We look at your notes together and work out what the behavior is getting your kid. That "why" is what the whole plan is built on.</p></li>
+      <li><p class="when">Within 48 hours</p><h3>Get a written plan</h3>
+        <p>What to say, what to do, what to stop doing, and what to track. One page you can stick on the fridge.</p></li>
+      <li><p class="when">Days 3 to 13</p><h3>Run it, with backup</h3>
+        <p>Log each day in the app. Send up to three 2-minute videos of the hard moments and get voice-memo feedback.</p></li>
+      <li><p class="when">Day 14 · 30-minute video call</p><h3>See the graph</h3>
+        <p>Your before and after, in your own data. Then we decide together: done, next target, or keep going.</p></li>
+    </ol>
+  </section>
+
+  <section id="pricing">
+    <div class="head col">
+      <p class="eyebrow">Pricing</p>
+      <h2>Cash pay. No insurance hoops, no diagnosis required.</h2>
+    </div>
+    <div class="tiers">
+      <div class="tier feature">
+        <span class="tag">Founding families: $249</span>
+        <h3>The Reset</h3>
+        <div class="price">$497 <small>one time, 2 weeks</small></div>
+        <ul>
+          <li>Intake forms and 3-day baseline</li>
+          <li>45-minute kickoff and 30-minute wrap-up calls</li>
+          <li>Written plan within 48 hours</li>
+          <li>Up to 3 video reviews with voice-memo feedback</li>
+          <li>Your progress graph</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h3>Keep Going</h3>
+        <div class="price">$199 <small>per month</small></div>
+        <ul>
+          <li>Two 20-minute calls a month</li>
+          <li>Weekly review of your data</li>
+          <li>Weekday messaging, 48-hour replies</li>
+        </ul>
+        <p class="fine">For families who finished a Reset.</p>
+      </div>
+      <div class="tier">
+        <h3>Self-serve</h3>
+        <div class="price">$29 <small>per month</small></div>
+        <ul>
+          <li>Behavior tracker and assessments</li>
+          <li>Script library for the usual battles</li>
+          <li>Monthly live group Q&amp;A</li>
+        </ul>
+        <p class="fine">Coming in early 2027.</p>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:16px">Charges appear on your statement as NERVAL.</p>
+  </section>
+
+  <section id="fit">
+    <div class="fit">
+      <div>
+        <h3>A good fit if</h3>
+        <ul>
+          <li>Your child is 2 to 12</li>
+          <li>One behavior is running the household</li>
+          <li>You've read the books, and it's still happening</li>
+          <li>You want a plan you can measure, not more advice</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Not the right fit if</h3>
+        <ul>
+          <li>Someone is getting hurt, or your child is hurting themselves</li>
+          <li>There are concerns about eating or feeding</li>
+          <li>You or your child need mental health treatment</li>
+        </ul>
+        <p class="fine">Our intake screens for these. If we're not the right fit, we'll point you to who is.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about col">
+    <p class="eyebrow">Who you're working with</p>
+    <h2>Kim Mitchell Potter</h2>
+    <p class="creds">MS, BCBA, LBS · Northeastern University</p>
+    <p>I've spent my career as a Board Certified Behavior Analyst and built a multi-state ABA company from the ground up. I've seen the same thing over and over: parents are the most powerful part of any plan, and the least supported. Last Nerve is the support I wish every family could get, without a waitlist, a diagnosis, or an insurance fight.</p>
+  </section>
+
+  <div class="join" id="join">
+    <p class="eyebrow" style="color:var(--glow)">Founding families</p>
+    <h2>Five spots at $249. Hold yours for $15.</h2>
+    <p>The deposit comes off your Reset price, and it's fully refundable if we're not a fit. Not ready yet? Join the waitlist and we'll tell you when spots open.</p>
+    <div class="cta-row">
+      <a class="btn primary js-deposit" href="#join">Hold a spot, $15</a>
+      <a class="btn ghost js-waitlist" href="#join">Join the waitlist</a>
+    </div>
+    <p class="fine js-status" style="color:var(--bg);opacity:.7"></p>
+  </div>
+
+  <div class="crisis">
+    <strong>Last Nerve is not a crisis service.</strong> If you or your child are in danger, call 911. If you're struggling, call or text 988 (Suicide and Crisis Lifeline) or call the National Parent Helpline at 1-855-427-2736.
+  </div>
+
+  <footer>
+    <span>Last Nerve is a service of Gladly Rara.</span>
+    <span>Coaching services are not therapy and not covered by insurance.</span>
+  </footer>
+</div>
+
+<script>
+// Paste the real links here before sharing the page.
+const LINKS = {
+  deposit: "",   // Stripe Payment Link for the $15 deposit
+  waitlist: ""   // Google Form or Tally waitlist form
+};
+(function(){
+  const status = document.querySelector(".js-status");
+  function wire(sel, url, label){
+    document.querySelectorAll(sel).forEach(a=>{
+      if(url){ a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+      else{
+        a.setAttribute("aria-disabled","true");
+        a.addEventListener("click", e=>{ e.preventDefault();
+          if(status) status.textContent = label + " opens soon. Check back this week.";
+          document.getElementById("join").scrollIntoView({behavior:"smooth",block:"center"});
+        });
+      }
+    });
+  }
+  wire(".js-deposit", LINKS.deposit, "The deposit link");
+  wire(".js-waitlist", LINKS.waitlist, "The waitlist");
+})();
+</script>
+
+</body>
+</html>
