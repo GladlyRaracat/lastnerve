@@ -169,8 +169,8 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
       <a class="btn primary js-screen" href="#join">Get a free screening</a>
       <a class="btn ghost js-freeplan" href="#join">Send me the free plan</a>
     </div>
-    <p class="offer">Free intake screening for the first <span class="js-free-count">25</span> families. Two minutes, no card.
-      <small>Normally $15. The first 2 families who are a fit get the full 2-week Reset free. Now enrolling in 9 states. <a href="#about" style="color:inherit">See if yours is one &rarr;</a></small></p>
+    <p class="offer">Free intake screening through <span class="js-deadline">Nov 14</span>. Two minutes, no card.
+      <small>Normally $15. Every family that screens as a fit by then is entered to win 1 of 2 free Resets. <a href="/terms.html#giveaway" style="color:inherit">Rules</a>. Now enrolling in 9 states. <a href="#about" style="color:inherit">See if yours is one &rarr;</a></small></p>
   </div>
 
   <div class="stat">
@@ -331,8 +331,8 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
   <div class="join" id="join">
     <p class="eyebrow" style="color:var(--glow)">Founding families</p>
     <h2>Start with a free intake screening.</h2>
-    <p>I'm Kimberly, a Board Certified Behavior Analyst. Before either of us commits to two weeks, I review your screening myself. It takes about two minutes and it's free for the first <span class="js-free-count">25</span> families (normally $15). No card needed.</p>
-    <p>If your family is a fit, we move straight into scheduling. The first 2 families who are a fit get the full 2-week Reset free. After that, the founding Reset is $249, in two installments of $124.50. If we're not a fit, I'll send the resources and referrals I think will actually help.</p>
+    <p>I'm Kimberly, a Board Certified Behavior Analyst. Before either of us commits to two weeks, I review your screening myself. It takes about two minutes and it's free through <span class="js-deadline">Nov 14</span> (normally $15). No card needed.</p>
+    <p>If your family is a fit, we move straight into scheduling. Every family that screens as a fit by <span class="js-deadline">Nov 14</span> is entered in a drawing for 1 of 2 free Resets (<a href="/terms.html#giveaway" style="color:var(--glow)">rules</a>). The founding Reset is otherwise $249, in two installments of $124.50. If we're not a fit, I'll send the resources and referrals I think will actually help.</p>
     <p>Not ready for that? Take the free Leaving the House plan. One page, built for the fridge.</p>
     <div class="cta-row">
       <a class="btn primary js-screen" href="#join">Get a free screening</a>
@@ -344,7 +344,7 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
   <section id="faq" class="col">
     <p class="eyebrow">FAQ</p>
     <h3>What does it cost?</h3>
-    <p>The intake screening is free for the first <span class="js-free-count">25</span> families (normally $15), and I review each one personally. The first 2 families who are a fit get the Reset free. For everyone else, the founding Reset is $249 total, paid in two installments of $124.50.</p>
+    <p>The intake screening is free through <span class="js-deadline">Nov 14</span> (normally $15), and I review each one personally. Families that screen as a fit by then are entered in a drawing for 1 of 2 free Resets. The founding Reset is otherwise $249 total, paid in two installments of $124.50.</p>
     <h3 style="margin-top:24px">What's the free plan?</h3>
     <p>A one-page game plan for getting out the door, written by a BCBA. It's general parent education, so it won't be tailored to your kid the way a Reset plan is. Plenty of families find it's enough to get started.</p>
     <h3 style="margin-top:24px">What if we're not a fit?</h3>
@@ -372,8 +372,8 @@ const LINKS = {
   screen: "https://docs.google.com/forms/d/1EJ9ChAyYBt1C6mtTsjIToN51aLXT0r3gvCHOWmTlvCM/viewform",   // Fit Screen form, opened directly while the screening is free
   freeplan: ""   // Form that collects an email and delivers the free Leaving the House plan
 };
-const FREE_SCREENS = 25;   // How many free intake screenings are on offer. Change this one number to update the whole page.
-document.querySelectorAll(".js-free-count").forEach(el=>{ el.textContent = FREE_SCREENS; });
+const FREE_UNTIL = "Nov 14";   // Last day of the free screening and giveaway entry. Change it here and in terms.html.
+document.querySelectorAll(".js-deadline").forEach(el=>{ el.textContent = FREE_UNTIL; });
 (function(){
   const status = document.querySelector(".js-status");
   function wire(sel, url, label){
