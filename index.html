@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Two-week parent training Reset with a Board Certified Behavior Analyst. One behavior, a real plan, your own data. Cash pay, no diagnosis needed.">
+<meta name="description" content="Two-week parent training Reset with a Board Certified Behavior Analyst. Free intake screening for founding families. One behavior, a real plan, your own data.">
 <meta property="og:title" content="Last Nerve: parent training from a BCBA">
 <meta property="og:description" content="Down to your last nerve? Tag in a pro. A 2-week Reset for the one behavior running your house.">
 <meta property="og:type" content="website">
@@ -126,6 +126,18 @@ section > .head{display:grid;gap:10px;margin-bottom:28px}
 .join h2{color:var(--bg)}
 .join p{color:var(--bg);opacity:.85;max-width:38rem}
 .join .btn.ghost{color:var(--bg);border-color:var(--bg)}
+/* feral parenting */
+.feral{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.feral{grid-template-columns:1fr}}
+.creature{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:10px;align-content:start}
+.creature .who{font-family:var(--display);font-weight:900;font-size:1.6rem;line-height:1}
+.creature .who span{color:var(--accent)}
+.creature .label{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.creature p{color:var(--ink)}
+.creature .scene{color:var(--muted);font-style:italic}
+.creature a.more{font-family:var(--display);font-weight:700;text-decoration:none}
+.offer{background:var(--glow);color:#1e1a3a;border-radius:16px;padding:16px 20px;font-weight:700;max-width:40rem}
+.offer small{display:block;font-weight:400;font-size:.9rem;margin-top:4px}
 .crisis{border-top:1px solid var(--line);padding-block:24px;font-size:.92rem;color:var(--muted)}
 .crisis strong{color:var(--ink)}
 footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
@@ -136,7 +148,7 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
 <div class="wrap">
   <header class="top">
     <a class="logo" href="#top" aria-label="Last Nerve home">last<span>nerve</span></a>
-    <a class="small" href="#join">Start the intake</a>
+    <a class="small js-screen" href="#join">Free screening</a>
   </header>
 
   <div class="hero" id="top">
@@ -154,10 +166,11 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
       <path class="spark" d="M726 66 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3z"/>
     </svg>
     <div class="cta-row">
-      <a class="btn primary js-deposit" href="#join">Start the intake</a>
-      <a class="btn ghost" href="#how">See how it works</a>
+      <a class="btn primary js-screen" href="#join">Get a free screening</a>
+      <a class="btn ghost js-freeplan" href="#join">Send me the free plan</a>
     </div>
-    <p class="fine">A $15 intake screening, credited to your first installment of the $249 founding Reset, or refunded in full if we're not a fit. Now enrolling families in 9 states. <a href="#about">See if yours is one &rarr;</a></p>
+    <p class="offer">Free intake screening for the first <span class="js-free-count">25</span> families. Two minutes, no card.
+      <small>Normally $15. The first 2 families who are a fit get the full 2-week Reset free. Now enrolling in 9 states. <a href="#about" style="color:inherit">See if yours is one &rarr;</a></small></p>
   </div>
 
   <div class="stat">
@@ -165,6 +178,62 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
     <p>of parents say that most days, their stress is completely overwhelming. For other adults, it's 26%. You are not imagining it, and you are not the only one.
       <cite>U.S. Surgeon General's Advisory on Parental Stress, August 2024</cite></p>
   </div>
+
+  <section id="feral">
+    <div class="head col">
+      <p class="eyebrow">Feral Parenting</p>
+      <h2>Which creature lives at your house?</h2>
+      <p class="fine">Every episode is a pattern behavior analysts see all day. The behavior looks wild. The reason behind it is usually pretty ordinary, and once you know the reason, you know which play to run.</p>
+    </div>
+    <div class="feral">
+      <div class="creature">
+        <div class="who">The <span>Opossum</span></div>
+        <p class="scene">You say "shoes." His spine turns to jelly.</p>
+        <p class="label">What's going on: escape</p>
+        <p>Playing dead delays the thing he'd rather skip. Every minute the flop buys is a minute it worked, so the flop comes back tomorrow.</p>
+        <p class="label">The play</p>
+        <p>A heads-up before the ask, a smaller first step, and a reason to get moving that beats stalling.</p>
+        <a class="more js-freeplan" href="#join">Get the free Leaving the House plan &rarr;</a>
+      </div>
+      <div class="creature">
+        <div class="who">The <span>T-Rex</span></div>
+        <p class="scene">At 5:00 he roars at the fridge for the top shelf.</p>
+        <p class="label">What's going on: part hunger, part access</p>
+        <p>Two things at once. He's truly hungry, and roaring has a track record of getting the good snack. Fix only one and the roar stays.</p>
+        <p class="label">The play</p>
+        <p>Get ahead of the hunger on a schedule, then teach an ask that works better than the roar does.</p>
+        <a class="more js-screen" href="#join">Get a free screening &rarr;</a>
+      </div>
+      <div class="creature">
+        <div class="who">The <span>Dog</span></div>
+        <p class="scene">He grabs the sock. You chase. Everyone's running.</p>
+        <p class="label">What's going on: you made it a game</p>
+        <p>To you it's a problem. To him it's the best ten minutes of his day, and you're the one who keeps showing up to play.</p>
+        <p class="label">The play</p>
+        <p>Stop being the other team, and give him a replacement behavior: a better way to start the game with you.</p>
+        <a class="more js-screen" href="#join">Get a free screening &rarr;</a>
+      </div>
+      <div class="creature">
+        <div class="who">The <span>Kitten</span></div>
+        <p class="scene">Sticker charts. The singing potty. Still two inches from the target.</p>
+        <p class="label">What's going on: toilet training</p>
+        <p>Potty training stalls when the plan depends on the prize. Timing, routine, and what happens right after matter more than the sticker.</p>
+        <p class="label">The play</p>
+        <p>A schedule built around your kid's actual day, and a clear answer for hits and for misses.</p>
+        <a class="more js-screen" href="#join">Get a free screening &rarr;</a>
+      </div>
+      <div class="creature">
+        <div class="who">The <span>Raccoon</span></div>
+        <p class="scene">Fifteen minutes of hissing at the pantry door. Then you cave.</p>
+        <p class="label">What's going on: caving on a delay</p>
+        <p>Hold out for fifteen minutes and then give in, and you've taught him that sixteen is the number. Sometimes-yes is stronger than always-yes.</p>
+        <p class="label">The play</p>
+        <p>Decide the answer before the raid starts, say it once, and make the rule the same on night one and night ten.</p>
+        <a class="more js-screen" href="#join">Get a free screening &rarr;</a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:16px">Educational parody and general information. Your kid's reasons may be different, which is what the screening and the Reset are for.</p>
+  </section>
 
   <section id="how">
     <div class="head col">
@@ -261,11 +330,13 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
 
   <div class="join" id="join">
     <p class="eyebrow" style="color:var(--glow)">Founding families</p>
-    <h2>Start with a $15 intake screening.</h2>
-    <p>I'm Kimberly, a Board Certified Behavior Analyst. Before either of us commits to two weeks, I review your intake myself. If your family is a fit, the $15 comes off your first installment. If it isn't, the $15 comes back to you in full, along with the resources I promised either way. The 2-Week Reset is $249 total, in two installments of $124.50. Five founding spots.</p>
-    <p>Your $15 starts the intake screening, and I review every intake myself. Fits move straight into scheduling, with the $15 credited to the first installment. Not a fit? Full refund, plus the resources and referrals I think will actually help.</p>
+    <h2>Start with a free intake screening.</h2>
+    <p>I'm Kimberly, a Board Certified Behavior Analyst. Before either of us commits to two weeks, I review your screening myself. It takes about two minutes and it's free for the first <span class="js-free-count">25</span> families (normally $15). No card needed.</p>
+    <p>If your family is a fit, we move straight into scheduling. The first 2 families who are a fit get the full 2-week Reset free. After that, the founding Reset is $249, in two installments of $124.50. If we're not a fit, I'll send the resources and referrals I think will actually help.</p>
+    <p>Not ready for that? Take the free Leaving the House plan. One page, built for the fridge.</p>
     <div class="cta-row">
-      <a class="btn primary js-deposit" href="#join">Start the intake</a>
+      <a class="btn primary js-screen" href="#join">Get a free screening</a>
+      <a class="btn ghost js-freeplan" href="#join">Send me the free plan</a>
     </div>
     <p class="fine js-status" style="color:var(--bg);opacity:.7"></p>
   </div>
@@ -273,7 +344,13 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
   <section id="faq" class="col">
     <p class="eyebrow">FAQ</p>
     <h3>What does it cost?</h3>
-    <p>You start with a $15 intake screening, which I review personally. If your family is a fit, the $15 is credited to your first installment. If it isn't, the $15 is refunded in full. The program itself is $249 total, paid in two installments of $124.50.</p>
+    <p>The intake screening is free for the first <span class="js-free-count">25</span> families (normally $15), and I review each one personally. The first 2 families who are a fit get the Reset free. For everyone else, the founding Reset is $249 total, paid in two installments of $124.50.</p>
+    <h3 style="margin-top:24px">What's the free plan?</h3>
+    <p>A one-page game plan for getting out the door, written by a BCBA. It's general parent education, so it won't be tailored to your kid the way a Reset plan is. Plenty of families find it's enough to get started.</p>
+    <h3 style="margin-top:24px">What if we're not a fit?</h3>
+    <p>You'll hear that from me directly, with referrals to people who are a better match: behavior analysts, speech-language pathologists, psychologists, and others.</p>
+    <h3 style="margin-top:24px">Are you a provider?</h3>
+    <p>If you're a BCBA, SLP, psychologist, OT, or pediatric provider and want to be listed as a referral resource for families we can't serve, <a href="mailto:kimmitchellpotter@gladlyrara.com?subject=List%20me%20as%20a%20Last%20Nerve%20referral%20resource">email me</a>.</p>
   </section>
 
   <div class="crisis">
@@ -291,8 +368,12 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
 // Paste the real links here before sharing the page.
 const LINKS = {
   deposit: "https://buy.stripe.com/28E7sN3FCcYn6Oj58tbMQ00",   // Stripe Payment Link for the $15 deposit
-  waitlist: "https://docs.google.com/forms/d/e/1FAIpQLSe9sGcJ5KpbzzIFSAulD1s0UGSBAAUeRe7RvQH5g0dWWtdlVA/viewform"   // Google Form or Tally waitlist form
+  waitlist: "https://docs.google.com/forms/d/e/1FAIpQLSe9sGcJ5KpbzzIFSAulD1s0UGSBAAUeRe7RvQH5g0dWWtdlVA/viewform",   // Google Form or Tally waitlist form
+  screen: "https://docs.google.com/forms/d/1EJ9ChAyYBt1C6mtTsjIToN51aLXT0r3gvCHOWmTlvCM/viewform",   // Fit Screen form, opened directly while the screening is free
+  freeplan: ""   // Form that collects an email and delivers the free Leaving the House plan
 };
+const FREE_SCREENS = 25;   // How many free intake screenings are on offer. Change this one number to update the whole page.
+document.querySelectorAll(".js-free-count").forEach(el=>{ el.textContent = FREE_SCREENS; });
 (function(){
   const status = document.querySelector(".js-status");
   function wire(sel, url, label){
@@ -309,6 +390,8 @@ const LINKS = {
   }
   wire(".js-deposit", LINKS.deposit, "The deposit link");
   wire(".js-waitlist", LINKS.waitlist, "The waitlist");
+  wire(".js-screen", LINKS.screen, "The free screening");
+  wire(".js-freeplan", LINKS.freeplan, "The free plan");
 })();
 </script>
 
