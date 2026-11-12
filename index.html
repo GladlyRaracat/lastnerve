@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Two-week parent training Reset with a Board Certified Behavior Analyst. Free intake screening for founding families. One behavior, a real plan, your own data.">
+<meta name="description" content="Proven parent training when it matters, from a licensed professional. Two-week Reset with a Board Certified Behavior Analyst. Free intake screening for founding families.">
 <meta property="og:title" content="Last Nerve: parent training from a BCBA">
 <meta property="og:description" content="Down to your last nerve? Tag in a pro. A 2-week Reset for the one behavior running your house.">
 <meta property="og:type" content="website">
@@ -50,17 +50,36 @@ p{margin:0}
 a{color:var(--accent)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:6px}
 
-/* top bar */
-.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px}
-.logo{font-family:var(--display);font-weight:900;font-size:1.35rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
-.logo span{color:var(--accent)}
-.top a.small{font-family:var(--mono);font-size:.85rem;text-decoration:none}
+/* top bar and hero: one dark band, same in light and dark themes */
+.hero-band{background:#1e1a3a;color:#fff}
+.top{display:flex;align-items:center;gap:16px;padding-block:24px 0}
+.logo{font-family:var(--display);font-weight:900;font-size:1.6rem;letter-spacing:-.01em;color:#fff;text-decoration:none}
+.logo span,.receive span{color:#ff5c9a}
+.top .nerve{flex:0 1 240px;min-width:0;height:auto}
+.top a.small{margin-left:auto;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#ff5c9a;white-space:nowrap}
+@media (max-width:520px){.top .nerve{display:none}.hero .eyebrow{font-size:.74rem;letter-spacing:.06em}}
 
 /* hero */
-.hero{padding-block:clamp(32px,7vw,80px) 24px;display:grid;gap:28px}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.lede{font-size:clamp(1.1rem,2vw,1.3rem);color:var(--muted);max-width:36rem}
+.hero{padding-block:10px clamp(32px,6vw,64px);display:grid;gap:22px;max-width:46rem}
+.hero .eyebrow{color:#fff;font-size:.9rem}
+.hero h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.12;color:#fff;margin-top:clamp(14px,3vw,32px)}
+.hero h1 em{font-style:normal;color:#ff5c9a;display:block}
+.lede{font-size:clamp(1.05rem,2vw,1.25rem);color:#f3efff;max-width:36rem}
+.lede strong{color:#fff}
+.receive{display:grid;gap:8px;font-size:clamp(1.02rem,1.8vw,1.15rem)}
+.receive ul{margin:0;padding-left:1.4em;display:grid;gap:2px}
+
+/* free screening band under the hero */
+.cta-band{background:#f6f4fa;color:#1e1a3a;text-align:center;padding-block:clamp(28px,5vw,48px);border-bottom:1px solid var(--line)}
+.cta-band .wrap{display:grid;gap:10px;justify-items:center}
+.cta-head{font-family:var(--display);font-weight:900;font-size:clamp(1.2rem,2.6vw,1.6rem);line-height:1.2}
+.cta-sub{font-family:var(--display);font-weight:700;font-size:clamp(1.05rem,2vw,1.25rem);color:#c81e63}
+.cta-band .btn.primary{background:#d6286f;border-color:#d6286f;color:#fff;font-size:1.2rem;padding:16px 36px;margin-top:8px}
+.cta-fine{font-size:.88rem;color:#5d5878;max-width:38rem;margin-top:10px}
+.cta-fine a{color:inherit}
 .nerve{width:100%;height:auto;display:block;max-width:100%}
+.hero-band .nerve .taut{stroke:#fff;stroke-width:2}
+.hero-band .nerve .fray{stroke:#ff5c9a;stroke-width:1.5}
 .nerve .taut{stroke:var(--ink);stroke-width:3;fill:none;stroke-linecap:round}
 .nerve .fray{stroke:var(--accent);stroke-width:2;fill:none;stroke-linecap:round}
 .nerve .spark{fill:var(--glow)}
@@ -145,34 +164,50 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
 </head>
 <body>
 
+<div class="hero-band">
 <div class="wrap">
   <header class="top">
     <a class="logo" href="#top" aria-label="Last Nerve home">last<span>nerve</span></a>
-    <a class="small js-screen" href="#join">Free screening</a>
+    <svg class="nerve" viewBox="0 0 400 60" aria-hidden="true" focusable="false">
+      <path class="taut" d="M4 30 C 70 30, 150 29, 220 30 S 250 30, 262 30"/>
+      <path class="fray" d="M262 30 C 290 27, 318 14, 352 8"/>
+      <path class="fray" d="M262 30 C 296 29, 328 26, 372 23"/>
+      <path class="fray" d="M262 30 C 292 33, 322 41, 358 49"/>
+      <path class="fray" d="M262 30 C 288 36, 304 51, 330 56"/>
+      <path class="spark" d="M360 1 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3z"/>
+      <path class="spark" d="M384 17 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/>
+      <path class="spark" d="M366 42 l2 4 4 2 -4 2 -2 4 -2 -4 -4 -2 4 -2z"/>
+    </svg>
+    <a class="small js-screen" href="#join">Get a free screening</a>
   </header>
 
   <div class="hero" id="top">
-    <p class="eyebrow">Parent training from a Board Certified Behavior Analyst</p>
-    <h1>Down to your <em>last nerve?</em><br>Tag in a pro.</h1>
-    <p class="lede">You probably already know the plays: stay consistent, skip the bribes, catch them being good. The hard part is running them at 7:45 on a school morning. A trainer helps you get the reps in. Two weeks, one behavior, and a behavior analyst in your corner the whole way.</p>
-    <svg class="nerve" viewBox="0 0 800 90" role="img" aria-label="A taut line that frays into loose strands at one end">
-      <path class="taut" d="M10 45 C 120 45, 240 44, 360 45 S 520 46, 560 45"/>
-      <path class="fray" d="M560 45 C 600 40, 640 22, 700 14"/>
-      <path class="fray" d="M560 45 C 610 44, 660 40, 735 36"/>
-      <path class="fray" d="M560 45 C 605 50, 650 62, 712 74"/>
-      <path class="fray" d="M560 45 C 600 54, 625 78, 668 86"/>
-      <path class="spark" d="M712 4 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z"/>
-      <path class="spark" d="M752 28 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/>
-      <path class="spark" d="M726 66 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3z"/>
-    </svg>
-    <div class="cta-row">
-      <a class="btn primary js-screen" href="#join">Get a free screening</a>
-      <a class="btn ghost js-freeplan" href="#join">Send me the free plan</a>
+    <p class="eyebrow">Real help. Real time. Real providers.</p>
+    <h1><em>Proven Parent Training</em> when it matters from a licensed professional</h1>
+    <p class="lede">Work, schedules, surprises, and now a meltdown. We get it. Our <strong>proven Parent Training</strong> fits your life, so you can spot trouble early and stop it before it starts.</p>
+    <div class="receive">
+      <p><strong>Sign up for a last<span>nerve</span> 2-week Reset and receive:</strong></p>
+      <ul>
+        <li>Intake screening to learn about your child</li>
+        <li>A clear picture of what's driving the behavior</li>
+        <li>Simple strategies you can use tonight</li>
+        <li>Real help when you need it most</li>
+      </ul>
     </div>
-    <p class="offer">Free intake screening through <span class="js-deadline">Nov 14</span>. Two minutes, no card.
-      <small>Normally $15. Every family that screens as a fit by then is entered to win 1 of 2 free Resets. <a href="/terms.html#giveaway" style="color:inherit">Rules</a>. Now enrolling in 9 states. <a href="#about" style="color:inherit">See if yours is one &rarr;</a></small></p>
   </div>
+</div>
+</div>
 
+<div class="cta-band">
+<div class="wrap">
+  <p class="cta-head">Get a FREE Intake Screening through <span class="js-deadline">Nov. 14</span></p>
+  <p class="cta-sub">Two minutes, no card.</p>
+  <a class="btn primary js-screen" href="#join">Start Intake Screening</a>
+  <p class="cta-fine">Normally $15. Every family that screens as a fit by then is entered to win 1 of 2 free Resets. <a href="/terms.html#giveaway">Rules</a>. Now enrolling in 9 states. <a href="#about">See if yours is one &rarr;</a><br>Not ready for that? <a class="js-freeplan" href="#join">Send me the free plan</a>.</p>
+</div>
+</div>
+
+<div class="wrap">
   <div class="stat">
     <div class="num">48%</div>
     <p>of parents say that most days, their stress is completely overwhelming. For other adults, it's 26%. You are not imagining it, and you are not the only one.
@@ -331,8 +366,8 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
   <div class="join" id="join">
     <p class="eyebrow" style="color:var(--glow)">Founding families</p>
     <h2>Start with a free intake screening.</h2>
-    <p>I'm Kimberly, a Board Certified Behavior Analyst. Before either of us commits to two weeks, I review your screening myself. It takes about two minutes and it's free through <span class="js-deadline">Nov 14</span> (normally $15). No card needed.</p>
-    <p>If your family is a fit, we move straight into scheduling. Every family that screens as a fit by <span class="js-deadline">Nov 14</span> is entered in a drawing for 1 of 2 free Resets (<a href="/terms.html#giveaway" style="color:var(--glow)">rules</a>). The founding Reset is otherwise $249, in two installments of $124.50. If we're not a fit, I'll send the resources and referrals I think will actually help.</p>
+    <p>I'm Kimberly, a Board Certified Behavior Analyst. Before either of us commits to two weeks, I review your screening myself. It takes about two minutes and it's free through <span class="js-deadline">Nov. 14</span> (normally $15). No card needed.</p>
+    <p>If your family is a fit, we move straight into scheduling. Every family that screens as a fit by <span class="js-deadline">Nov. 14</span> is entered in a drawing for 1 of 2 free Resets (<a href="/terms.html#giveaway" style="color:var(--glow)">rules</a>). The founding Reset is otherwise $249, in two installments of $124.50. If we're not a fit, I'll send the resources and referrals I think will actually help.</p>
     <p>Not ready for that? Take the free Leaving the House plan. One page, built for the fridge.</p>
     <div class="cta-row">
       <a class="btn primary js-screen" href="#join">Get a free screening</a>
@@ -344,7 +379,7 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
   <section id="faq" class="col">
     <p class="eyebrow">FAQ</p>
     <h3>What does it cost?</h3>
-    <p>The intake screening is free through <span class="js-deadline">Nov 14</span> (normally $15), and I review each one personally. Families that screen as a fit by then are entered in a drawing for 1 of 2 free Resets. The founding Reset is otherwise $249 total, paid in two installments of $124.50.</p>
+    <p>The intake screening is free through <span class="js-deadline">Nov. 14</span> (normally $15), and I review each one personally. Families that screen as a fit by then are entered in a drawing for 1 of 2 free Resets. The founding Reset is otherwise $249 total, paid in two installments of $124.50.</p>
     <h3 style="margin-top:24px">What's the free plan?</h3>
     <p>A one-page game plan for getting out the door, written by a BCBA. It's general parent education, so it won't be tailored to your kid the way a Reset plan is. Plenty of families find it's enough to get started.</p>
     <h3 style="margin-top:24px">What if we're not a fit?</h3>
@@ -372,7 +407,7 @@ const LINKS = {
   screen: "https://docs.google.com/forms/d/1EJ9ChAyYBt1C6mtTsjIToN51aLXT0r3gvCHOWmTlvCM/viewform",   // Fit Screen form, opened directly while the screening is free
   freeplan: "https://docs.google.com/forms/d/1bALbMUtF1uaQFNCrAxLz24Ze3-CIlwtRq5flTCqdlxQ/viewform"   // Form that collects an email and delivers the free Leaving the House plan
 };
-const FREE_UNTIL = "Nov 14";   // Last day of the free screening and giveaway entry. Change it here and in terms.html.
+const FREE_UNTIL = "Nov. 14";   // Last day of the free screening and giveaway entry. Change it here and in terms.html.
 document.querySelectorAll(".js-deadline").forEach(el=>{ el.textContent = FREE_UNTIL; });
 (function(){
   const status = document.querySelector(".js-status");
