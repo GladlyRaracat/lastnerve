@@ -394,7 +394,7 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
     <h3 style="margin-top:24px">What if we're not a fit?</h3>
     <p>You'll hear that from me directly, with referrals to people who are a better match: behavior analysts, speech-language pathologists, psychologists, and others.</p>
     <h3 style="margin-top:24px">Are you a provider?</h3>
-    <p>If you're a BCBA, SLP, psychologist, OT, or pediatric provider and want to be listed as a referral resource for families we can't serve, <a href="https://docs.google.com/forms/d/1hu-YQej-dc0OMCqkd5dJmXOi6q_WRswy4bybCPPXHzk/viewform" target="_blank" rel="noopener">add yourself here</a>. It takes two minutes, and there are no fees or referral payments in either direction.</p>
+    <p>If you're a BCBA, SLP, psychologist, OT, or pediatric provider and want to be listed as a referral resource for families we can't serve, <a href="/go/provider.html" target="_blank" rel="noopener">add yourself here</a>. It takes two minutes, and there are no fees or referral payments in either direction.</p>
   </section>
 
   <div class="crisis">
@@ -413,8 +413,10 @@ footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;
 const LINKS = {
   deposit: "https://buy.stripe.com/28E7sN3FCcYn6Oj58tbMQ00",   // Stripe Payment Link for the $15 deposit
   waitlist: "https://docs.google.com/forms/d/e/1FAIpQLSe9sGcJ5KpbzzIFSAulD1s0UGSBAAUeRe7RvQH5g0dWWtdlVA/viewform",   // Google Form or Tally waitlist form
-  screen: "https://docs.google.com/forms/d/1EJ9ChAyYBt1C6mtTsjIToN51aLXT0r3gvCHOWmTlvCM/viewform",   // Fit Screen form, opened directly while the screening is free
-  freeplan: "https://docs.google.com/forms/d/1bALbMUtF1uaQFNCrAxLz24Ze3-CIlwtRq5flTCqdlxQ/viewform"   // Form that collects an email and delivers the free Leaving the House plan
+  // The next two go through small counter pages in /go/ so Cloudflare can count button taps (look under Paths).
+  // The real Google Form links live in go/screening.html and go/free-plan.html. Change them there.
+  screen: "/go/screening.html",   // Fit Screen form, opened while the screening is free
+  freeplan: "/go/free-plan.html"   // Form that collects an email and delivers the free Leaving the House plan
 };
 const FREE_UNTIL = "Nov. 19";   // Last day of the free screening and giveaway entry. Change it here and in terms.html.
 document.querySelectorAll(".js-deadline").forEach(el=>{ el.textContent = FREE_UNTIL; });
