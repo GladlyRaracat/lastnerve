@@ -162,6 +162,33 @@ section > .head{display:grid;gap:10px;margin-bottom:28px}
 .crisis{border-top:1px solid var(--line);padding-block:24px;font-size:.92rem;color:var(--muted)}
 .crisis strong{color:var(--ink)}
 footer{padding-block:24px 48px;font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+/* laptop and desktop: use the full width instead of one narrow left column. Phones and tablets are untouched. */
+@media (min-width:960px){
+  .hero{max-width:none;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);column-gap:56px;align-items:start;padding-block:28px 72px}
+  .hero > *{grid-column:1}
+  .hero .receive{grid-column:2;grid-row:1 / span 3;align-self:center;background:#2b2658;border-radius:22px;padding:30px 32px;gap:12px}
+  .hero .receive ul{gap:8px}
+  .feral{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .feral .creature{grid-column:span 2}
+  .feral .creature:nth-child(n+4){grid-column:span 3}
+  #how{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:64px;align-items:start}
+  #how .head{position:sticky;top:32px;margin-bottom:0}
+  #how .col{max-width:none}
+  #about{max-width:54rem;grid-template-columns:auto minmax(0,1fr);column-gap:40px}
+  #about > *{grid-column:2}
+  #about > .eyebrow{grid-column:1 / -1}
+  #about > .headshot{grid-column:1;grid-row:2 / span 3;width:200px;height:200px}
+  .join{grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:56px;align-items:start}
+  .join > *{grid-column:1}
+  .join > .eyebrow{grid-column:1 / -1}
+  .join > p:not(.eyebrow):not(.js-status){grid-column:2;max-width:none}
+  .join > h2{grid-row:2}
+  .join > .cta-row{grid-row:3}
+  .join > .js-status{grid-row:4}
+  #faq{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px 48px;align-items:start}
+  #faq > .eyebrow{grid-column:1 / -1}
+  #faq > h3{margin-top:0!important}
+}
 </style>
 </head>
 <body>
