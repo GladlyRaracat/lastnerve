@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Opening the provider sign-up · Last Nerve</title>
+<!-- Click counter. Each load of this page shows up in Cloudflare Web Analytics under Paths as /go/provider.html,
+     which is how we count taps on this button. It then forwards to the form. Change the form link in DEST below
+     (and in the two other spots on this page). -->
+<noscript><meta http-equiv="refresh" content="0;url=https://docs.google.com/forms/d/e/1FAIpQLSfLQ-XY-vjd3HBYlaVqW-DCVp2l0xhhC54q6oKbidsVJhWg0w/viewform"></noscript>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fbf8ff;color:#1e1a3a;font-family:ui-sans-serif,system-ui,sans-serif;text-align:center;padding:24px}
+p{margin:8px 0;font-size:1.1rem;font-weight:700}
+a{color:#d6286f;font-weight:700}
+</style>
+</head>
+<body>
+<main>
+  <p>Opening the provider sign-up…</p>
+  <a id="go" href="https://docs.google.com/forms/d/e/1FAIpQLSfLQ-XY-vjd3HBYlaVqW-DCVp2l0xhhC54q6oKbidsVJhWg0w/viewform">Open the provider form</a>
+</main>
+<script>
+const DEST = "https://docs.google.com/forms/d/e/1FAIpQLSfLQ-XY-vjd3HBYlaVqW-DCVp2l0xhhC54q6oKbidsVJhWg0w/viewform";
+(function(){
+  let gone = false;
+  function go(){ if(gone) return; gone = true; location.replace(DEST); }
+  // Give the analytics beacon a moment to record the page view, then forward.
+  window.addEventListener("load", function(){ setTimeout(go, 900); });
+  setTimeout(go, 3000);   // safety net if the load event is slow
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ac73680aca49462dbe9d472fcca965f3"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
